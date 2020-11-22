@@ -1,0 +1,38 @@
+.single-post{
+    width: 30%;
+    font-size: 18px;
+    background-color: plum;
+    padding: 50px;
+    margin: 5px;
+}
+
+.actions img{
+    width: 16px; 
+}
+
+.user_size {
+    display: block;
+    max-width:30px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+    top:10;
+    position:relative;
+    right:0;
+}
+
+span{
+    font-size: 0.5em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: skyblue !important;
+    border-top: green;
+}
+
+img{
+    max-width: 100%;
+
+}

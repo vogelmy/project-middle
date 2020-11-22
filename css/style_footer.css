@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+}
+
+header {
+    height: 0px;
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:10px;
+    height:20px;
+    width:100%;
+    background:#999;
+    
+    
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.copy{
+    
+    top:60px;
+    bottom: 60px;
+    background-color: #343A40;
+    text-align: center;
+    color: white;
+
+}
