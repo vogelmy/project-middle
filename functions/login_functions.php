@@ -1,6 +1,12 @@
 <?php
 
-$db = mysqli_connect('127.0.0.1', 'root', '', 'my_db');
+// Development connection
+// $db = mysqli_connect('127.0.0.1', 'root', '', 'my_db');
+
+// Remote database connection
+$db = mysqli_connect('sql7.freemysqlhosting.net', 'sql7378008', 'bRRWVuN2zP', 'sql7378008');
+
+
 
 if (!$db) {
     echo 'Can not connect to server.';
@@ -10,7 +16,6 @@ if (!$db) {
 
 
 if (isset($_POST['login'])) {
-
     global $db;
 
     require 'validations.php';
@@ -38,13 +43,9 @@ if (isset($_POST['login'])) {
             . "WHERE user_email = '$email';";
 
     if ($result = mysqli_query($db, $query)) {
-
         if ($row = mysqli_fetch_assoc($result)) {
-
             $pw_match = password_verify($pw, $row['user_pw']);
             if ($pw_match) {
-
-
                 $_SESSION['user_name'] = htmlentities($row['user_name'], ENT_HTML5, "utf-8", false);
 
                 $_SESSION['user_id'] = $row['user_id'];
