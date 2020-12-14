@@ -1,12 +1,10 @@
 <?php
 
+//Remote database connection
+$db = mysqli_connect('db4free.net:3306', 'middleproject', '12345678', 'middleproject');
+
 // Development connection
-// $db = mysqli_connect('127.0.0.1', 'root', '', 'my_db');
-
-// Remote database connection
-$db = mysqli_connect('sql7.freemysqlhosting.net', 'sql7378008', 'bRRWVuN2zP', 'sql7378008');
-
-
+//$db = mysqli_connect('127.0.0.1', 'root', '', 'my_db');
 
 if (!$db) {
     echo 'Can not connect to server.';
